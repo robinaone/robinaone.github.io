@@ -4,72 +4,34 @@
 
   <head>
     <title>Comparing Schools</title>
+    <link rel="stylesheet" type="text/css" href="SchoolInformationPage.css">
   </head>
 
   <body>
 
-    <div class="header">
-
-      <div class="logo">
-
-        <img src="images\logo.jpg" alt="logo">
-
-      </div>
-
-      <div class="title">
-
-      </div>
-
-      <div class="menu">
-
-        <ul>
-
-          <li><a href="robinaone.github.io">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="https://www.google.com">Google</a></li>
-
-        </ul>
-
-      </div>
-
+    <div class="heading">
+      <img src="images\logo.jpg" alt="logo">
+      <ul>
+        <li><a href="https://www.robinaone.github.io">Home</a></li>
+        <li><a href="https://www.linkedin.com/in/caleb-hargraves-b3715a135/">About Me</a></li>
+        <li><a href="https://www.google.com">Google</a></li>
+        <li><a href="https://www.github.com/robinaone">My Projects</a></li>
+      </ul>
     </div>
-
     <div class="banner">
-
-      <img src="images\banner.jpg" alt="banner image">
-
+      <img src="images\banner.jpg" alt="banner">
     </div>
-
     <div class="cardWrapper">
-
-      <select name="chosenCollege">
-
-        <option>
-          University of Texas
-        </option>
-
-        <option>
-          Baylor University
-        </option>
-
-        <option>
-          Rice University
-        </option>
-
-        <option>
-          University of Texas San Antonio
-        </option>
-
-      </select>
-
       <div class="cardOne">
-        <p>
-          School Name
-        </p>
-
-        <img src="" alt="school image">
-
-        <table border="1">
+        <select name="chosenCollege">
+          <option selected>University of Texas</option>
+          <option>Baylor University</option>
+          <option>Rice University</option>
+          <option>University of Texas San Antionio</option>
+        </select>
+        <h2>University of Texas</h2>
+        <img src="images\ut.jpg" alt="school image">
+        <table>
 
           <tbody>
 
@@ -176,65 +138,25 @@
           </tbody>
 
         </table>
-
-        <p>
-          Top 5 Majors
-        </p>
-
+        <p>Top 5 Majors</p>
         <ol>
-
-          <li>
-            Computer Science
-          </li>
-
-          <li>
-            Physics
-          </li>
-
-          <li>
-            Engineering
-          </li>
-
-          <li>
-            Business
-          </li>
-
-          <li>
-            Marketing
-          </li>
-
+          <li>Computer Science</li>
+          <li>Physics</li>
+          <li>Engineering</li>
+          <li>Business</li>
+          <li>Marketing</li>
         </ol>
-
       </div>
-
-      <select name="chosenCollege">
-
-        <option>
-          University of Texas
-        </option>
-
-        <option>
-          Baylor University
-        </option>
-
-        <option>
-          Rice University
-        </option>
-
-        <option>
-          University of Texas San Antonio
-        </option>
-
-      </select>
-
       <div class="cardTwo">
-        <p>
-          School Name
-        </p>
-
-        <img src="" alt="school image">
-
-        <table border="1">
+        <select name="chosenCollege">
+          <option>Baylor University</option>
+          <option>University of Texas</option>
+          <option>Rice University</option>
+          <option>University of Texas San Antionio</option>
+        </select>
+        <h2>Baylor University</h2>
+        <img src="images\baylor.jpg" alt="school image">
+        <table>
 
           <tbody>
 
@@ -341,87 +263,52 @@
           </tbody>
 
         </table>
-
-        <p>
-          Top 5 Majors
-        </p>
-
+        <p>Top 5 Majors</p>
         <ol>
-
-          <li>
-            Computer Science
-          </li>
-
-          <li>
-            Physics
-          </li>
-
-          <li>
-            Engineering
-          </li>
-
-          <li>
-            Business
-          </li>
-
-          <li>
-            Marketing
-          </li>
-
+          <li>Computer Science</li>
+          <li>Physics</li>
+          <li>Engineering</li>
+          <li>Business</li>
+          <li>Marketing</li>
         </ol>
-
       </div>
-
     </div>
-
     <div class="contactInfo">
-
       <fieldset>
-
         <legend>
           Send Us Feedback
         </legend>
-
         <label>
           Name:
           <br>
-          <input name="feedName" type="text" size="50">
+          <input name="feedName" type="text">
         </label>
-
         <br>
-
+        <br>
         <label>
           Email:
           <br>
-          <input name="feedEmail" type="text" size="50">
+          <input name="feedEmail" type="text">
         </label>
-
         <br>
-
+        <br>
         <label>
           Comment:
           <br>
           <textarea cols="30" rows="10"> </textarea>
         </label>
-
         <br>
-
-        <input value="Send Comment" type="submit">
-
+        <br>
+        <input class="rounded" value="Send Comment" type="submit">
       </fieldset>
-
     </div>
-
-    <div class="social">
-
-      <a href="https://www.facebook.com"><img src="images\facebook.jpg" alt="Share on Facebook!"></a>
-
-      <a href="https://www.instagram.com"><img src="images\instagram.jpg" alt="Share on Instagram!"></a>
-
-      <a href="https://www.twitter.com"><img src="images\twitter.jpg" alt="Share on Twitter!"></a>
-
+    <br>
+    <br>
+    <div class="footer">
+      <img src="images\facebook.jpg" alt="Share on Facebook!">
+      <img src="images\instagram.jpg" alt="Share on Instagram!">
+      <img src="images\twitter.jpg  " alt="Share on Twitter!">
     </div>
-
   </body>
 
 </html>
