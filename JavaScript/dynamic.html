@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Dynamic Text Box example</title>
+  <link rel="stylesheet" type="text/css" href="dynamic.css">
+  <script src="dynamic.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <button onclick='createBox()'>Create Text Box</button>
+
+    <div id='textBoxes'>
+    </div>
+
+    <select>
+      <option value="add">Calculate Sum</option>
+      <option value="average">Calculate Average</option>
+      <option value="median">Calculate Median</option>
+    </select>
+    <button id='addButton' onclick='add()'>Add Them Up</button>
+
+    <div class="answerText">
+      <label>The answer is: <span id='answer'>...</span></label>
+    </div>
+
+  </div>
+</body>
+
+</html>
