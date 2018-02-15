@@ -9,23 +9,24 @@
   <script src="dynamic.js"></script>
 </head>
 
-<body>
-  <div class="wrapper">
+<body onload="setup()">
+  <div class='wrapper'>
     <button onclick='createBox()'>Create Text Box</button>
 
     <div id='textBoxes'>
     </div>
 
-    <select>
-      <option value="add">Calculate Sum</option>
-      <option value="average">Calculate Average</option>
-      <option value="median">Calculate Median</option>
-    </select>
-    <button id='addButton' onclick='add()'>Add Them Up</button>
-
-    <div class="answerText">
+    <div class='answerText'>
       <label>The answer is: <span id='answer'>...</span></label>
     </div>
+
+    <select id='actionChoice' onchange='chooseAction()'>
+      <option value='average' selected>Calculate Average</option>
+      <option value='add'>Calculate Sum</option>
+      <option value='median'>Calculate Median</option>
+    </select>
+
+    <button id='addButton'>text</button>
 
   </div>
 </body>
