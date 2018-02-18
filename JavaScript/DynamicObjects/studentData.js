@@ -14,15 +14,10 @@ function retrieveId() {
   reportcard.classList.remove("hidden");
   document.getElementById('studentNumber').innerHTML = "";
   studentNumber.innerHTML = action.value;
-  avatar = document.getElementById('avi')
-  avatar.href = student.avatar;
 }
 
-function createInfo() {
-  document.getElementById('ps').innerHTML = "";
-  document.getElementById('name').innerHTML = student.lastName + ", " + student.firstName;
-  document.getElementById('addr1').innerHTML = student.streetAddress;
-  document.getElementById('addr2').innerHTML = student.city + ", " + student.state + student.zipCode;
+function createInfo(student) {
+
 }
 
 function makeCourseRows(student) {
@@ -30,6 +25,10 @@ function makeCourseRows(student) {
   student.courses.forEach(function(course) {
     row = document.createElement('tr');
     accum = 0;
+    document.getElementById('studentImage').src = student.avatar;
+    document.getElementById('name').innerHTML = student.lastName + ", " + student.firstName;
+    document.getElementById('addr1').innerHTML = student.streetAddress;
+    document.getElementById('addr2').innerHTML = student.city + ", " + student.state + " " + student.zipCode;
     row.appendChild(createTD(course.courseName));
     row.appendChild(createTD(course.instructor));
     row.appendChild(createTD(course.termGrades[0]));
