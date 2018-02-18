@@ -12,6 +12,17 @@ function retrieveId() {
   action = choice[choice.selectedIndex];
   makeCourseRows(students[action.index-1]);
   reportcard.classList.remove("hidden");
+  document.getElementById('studentNumber').innerHTML = "";
+  studentNumber.innerHTML = action.value;
+  avatar = document.getElementById('avi')
+  avatar.href = student.avatar;
+}
+
+function createInfo() {
+  document.getElementById('ps').innerHTML = "";
+  document.getElementById('name').innerHTML = student.lastName + ", " + student.firstName;
+  document.getElementById('addr1').innerHTML = student.streetAddress;
+  document.getElementById('addr2').innerHTML = student.city + ", " + student.state + student.zipCode;
 }
 
 function makeCourseRows(student) {
@@ -30,15 +41,7 @@ function makeCourseRows(student) {
     }
     row.appendChild(createTD(Math.ceil(accum/course.termGrades.length)));
     document.getElementById('courseRows').appendChild(row);
-    //makeBottomID();
   });
-}
-
-function makeBottomID(student) {
-  document.getElementById('studentNumber').innerHTML = "";
-  studentID = document.createElement('p');
-  studentID.innerHTML = students.idNumber;
-  document.getElementById('studentNumber').appendChild(studentID);
 }
 
 function createTD(content) {

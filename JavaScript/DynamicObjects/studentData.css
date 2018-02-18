@@ -30,6 +30,7 @@ select {
 }
 
 #reportcard {
+  width: 70%;
   border: solid 2px black;
   border-radius: 15px;
 }
