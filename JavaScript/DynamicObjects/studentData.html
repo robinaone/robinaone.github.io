@@ -4,28 +4,42 @@
 
   <head>
     <title>Neely HS Report Card</title>
-    <link rel="stylesheet" type="text/css" href="studentData.css">
-    <script src="objects.js"> </script>
-    <script src="studentData.js"> </script>
+    <link rel='stylesheet' type='text/css' href='studentData.css'>
+    <script src='objects.js'> </script>
+    <script src='studentData.js'> </script>
   </head>
 
-  <body>
+  <body onload='chooseStudent()'>
 
-      <select>
-        <option>Please select a student...</option>
+      <select id='dropdown' onchange='retrieveId()'>
+        <option value='0' selected>Please select a student...</option>
       </select>
 
-    <div id=reportCard>
-
-      <div class=topofCard>
-
+      <br>
+      <br>
+      <br>
+      <div id='reportcard' class='hidden'>
+        <label id='name'></label>
+        <label id='addr1'></label>
+        <label id='addr2'></label>
+        <div id='table'>
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>Instructor</th>
+            <th>Term 1</th>
+            <th>Term 2</th>
+            <th>Term 3</th>
+            <th>Term 4</th>
+            <th>Average</th>
+          </tr>
+          <tbody id='courseRows'>
+          </tbody>
+        </table>
       </div>
-
-      <div class=studentTable>
-
+      <div id='studentNumber'>
       </div>
-
-    </div>
+      </div>
   </body>
 
 </html>
