@@ -12,6 +12,12 @@ function retrieveId() {
   action = choice[choice.selectedIndex];
   makeCourseRows(students[action.index-1]);
   reportcard.classList.remove("hidden");
+  document.getElementById('studentNumber').innerHTML = "";
+  studentNumber.innerHTML = action.value;
+}
+
+function createInfo(student) {
+
 }
 
 function makeCourseRows(student) {
@@ -19,6 +25,10 @@ function makeCourseRows(student) {
   student.courses.forEach(function(course) {
     row = document.createElement('tr');
     accum = 0;
+    document.getElementById('studentImage').src = student.avatar;
+    document.getElementById('name').innerHTML = student.lastName + ", " + student.firstName;
+    document.getElementById('addr1').innerHTML = student.streetAddress;
+    document.getElementById('addr2').innerHTML = student.city + ", " + student.state + " " + student.zipCode;
     row.appendChild(createTD(course.courseName));
     row.appendChild(createTD(course.instructor));
     row.appendChild(createTD(course.termGrades[0]));
@@ -30,15 +40,7 @@ function makeCourseRows(student) {
     }
     row.appendChild(createTD(Math.ceil(accum/course.termGrades.length)));
     document.getElementById('courseRows').appendChild(row);
-    //makeBottomID();
   });
-}
-
-function makeBottomID(student) {
-  document.getElementById('studentNumber').innerHTML = "";
-  studentID = document.createElement('p');
-  studentID.innerHTML = students.idNumber;
-  document.getElementById('studentNumber').appendChild(studentID);
 }
 
 function createTD(content) {
