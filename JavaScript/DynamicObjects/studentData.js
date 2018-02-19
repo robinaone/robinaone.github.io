@@ -21,6 +21,7 @@ function createInfo(student) {
 }
 
 function makeCourseRows(student) {
+  document.getElementById('reportcard').className = 'hidden';
   document.getElementById('courseRows').innerHTML = "";
   student.courses.forEach(function(course) {
     row = document.createElement('tr');
