@@ -21,22 +21,22 @@
     <label id="playerName">This is my Name</label>
   </div>
   <div id="dicePanel">
-    <img id="die0" src="images/die6.svg" class="saved">
-    <img id="die1" src="images/die2.svg">
-    <img id="die2" src="images/die3.svg" class="saved">
-    <img id="die3" src="images/die4.svg">
-    <img id="die4" src="images/die5.svg">
+    <img id="die0" onclick='saveDie(0)'>
+    <img id="die1" onclick='saveDie(1)'>
+    <img id="die2" onclick='saveDie(2)'>
+    <img id="die3" onclick='saveDie(3)'>
+    <img id="die4" onclick='saveDie(4)'>
     <br>
     <br>
     <br>
-    <button id="roll">Roll Dice</button>
+    <button id="roll" onclick='rollDice()'>Roll Dice<label id='throwRemainder'></label></button>
   </div>
 
   <div id="scoreCard">
     <table>
       <tr>
-        <th></th>
-        <th id='scoreHeader'>Score</th>
+        <th id='turnsLeft'></th>
+        <th id='scoreHeader'>Score </th>
       </tr>
       <tbody id="scoreRows">
 
