@@ -36,6 +36,7 @@ html, body {
   margin-top: 25px;
   margin-bottom: 15px;
 }
+
 #playerAvatar {
   width: 100px;
   margin: 8px;
@@ -79,6 +80,24 @@ html, body {
   width: auto;
   vertical-align: middle;
 	text-align: center;
+}
+
+.unscored {
+	background-color: yellow;
+	color: black;
+}
+
+.unscored:hover {
+	cursor: pointer;
+}
+
+.scored {
+	background-color: black;
+	color: white;
+}
+
+.totals {
+	color: yellow;
 }
 
 #scoringRules {

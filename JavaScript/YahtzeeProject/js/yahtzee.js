@@ -25,30 +25,39 @@ function loadDice() {
 }
 
 function loadScoreCard() {
-  yahtzee.scoreCard.forEach(function(scoreCardRow) {
+  yahtzee.scoreCard.forEach(function(scoreCardRow, index) {
     document.getElementById('turnsLeft').innerHTML = yahtzee.turnsRemaining + ' Left';
     if (scoreCardRow.top) {
-      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);
+      if (scoreCardRow.scoreRecorded)
+        className = "scored";
+      else (scoreCardRow.scoreRows)
+        className = "unscored";
+      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score, (scoreCardRow.scoreRecorded ? "scored" : "unscored"), !scoreCardRow.scoreRecorded, index);
     }
   });
-  buildScoreCardRow("Top Subtotal:", " ");
-  buildScoreCardRow("Top Bonus:", " ");
-  yahtzee.scoreCard.forEach(function(scoreCardRow) {
+  buildScoreCardRow("Top Subtotal:", " ", "totals", false, 0);
+  buildScoreCardRow("Top Bonus:", " ", "totals", false, 0);
+  yahtzee.scoreCard.forEach(function(scoreCardRow, index) {
     if (!scoreCardRow.top) {
-      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);
+      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score, (scoreCardRow.scoreRecorded ? "scored" : "unscored"), !scoreCardRow.scoreRecorded, index);
     }
   });
-  buildScoreCardRow("Total Score:", " ");
+  buildScoreCardRow("Total Score:", " ", "totals", false, 0);
 }
 
-function buildScoreCardRow(title, score) {
+function buildScoreCardRow(title, score, columnClassName, clickable, scorecardIndex) {
   tr = document.createElement('tr');
   td1 = document.createElement('td');
   td1.innerHTML = title;
   tr.appendChild(td1);
   td2 = document.createElement('td');
   td2.innerHTML = score;
+  td2.className = columnClassName;
   tr.appendChild(td2);
+  if (clickable) {
+    td2.setAttribute('data-scorecardIndex', scorecardIndex);
+    td2.onclick = saveScore;
+  }
   document.getElementById('scoreRows').appendChild(tr);
 }
 
@@ -66,6 +75,12 @@ function rollDice() {
     yahtzee.throwsRemainingInTurn--;
   loadDice();
   }
+}
+
+function saveScore() {
+  index = this.getAttribute('data-scorecardIndex');
+  this.className = "scored";
+  alert(index);
 }
 
 function saveDie(dieIndex) {
