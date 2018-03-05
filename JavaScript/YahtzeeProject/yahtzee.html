@@ -21,6 +21,8 @@
     <label id="playerName">This is my Name</label>
   </div>
   <div id="dicePanel">
+    <span id='turnsLeft' class='turnsleft'></span>
+    <br>
     <img id="die0" onclick='saveDie(0)'>
     <img id="die1" onclick='saveDie(1)'>
     <img id="die2" onclick='saveDie(2)'>
@@ -30,6 +32,8 @@
     <br>
     <br>
     <button id="roll" onclick='rollDice()'>Roll Dice<label id='throwRemainder'></label></button>
+    <br>
+    <button id='launchNewGame' class='newGame' onclick='newGame()' value='New Game'>New Game</button>
   </div>
 
   <div id="scoreCard">
