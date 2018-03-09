@@ -1,14 +1,26 @@
+//Modal
+function loadModal() {
+  modal = document.getElementsByClassName('modal-wrapper')[0];
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  name = document.getElementById('nameInput').value;
+  if (name.length > 0) {
+    document.getElementById('playerName').innerHTML = name;
+    checkedImage = document.querySelector('input[name=avatar][checked]').value;
+    document.getElementById('playerAvatar').src = checkedImage;
+    modal = document.getElementsByClassName('modal-wrapper')[0];
+    modal.style.display = "none";
+    setup();
+  }
+}
+
 function setup() {
-  playerSetup();
   loadScoreCard();
   loadDice();
 }
 // UI
-function playerSetup() {
-  document.getElementById('playerName').innerHTML = yahtzee.player.name;
-  document.getElementById('playerAvatar').src = yahtzee.player.avatar;
-}
-
 function loadDice() {
   dieImages = ['images/question.png', 'images/die1.svg', 'images/die2.svg', 'images/die3.svg', 'images/die4.svg', 'images/die5.svg', 'images/die6.svg']
   yahtzee.dice.forEach(function (die, index) {
@@ -41,7 +53,7 @@ function calculateScores() {
   });
   loadScoreCard();
 }
-
+//SCORE CALCULATION
 function calculateScores() {
   yahtzee.scoreCard.forEach(function(scoreCardRow) {
     if (!scoreCardRow.scoreRecorded) {

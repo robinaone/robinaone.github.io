@@ -6,14 +6,26 @@
   <title>Yahtzee!</title>
   <link rel="stylesheet" type="text/css" href="css/yahtzee.css">
   <script src="js/yahtzee.js"> </script>
-  <script src="js/yahtzeeObjectStart.js"> </script>
+  <script src="js/yahzteeObject.js"> </script>
 </head>
 
-<body onload='setup()'>
+<body onload='loadModal()'>
   <div id="wholePage">
   <div id="title">
     <h1>Play Yahtzee!</h1>
   </div>
+
+  <div class="modal-wrapper">
+  <div class="modal-content">
+    <label>Enter your name: <input id="nameInput" type="text"></label>
+    <button onclick="closeModal()">Play Yahtzee!</button>
+    <br>
+    <input type="radio" name="avatar" value="https://lorempixel.com/200/200/people/6/" checked><img src="https://lorempixel.com/200/200/people/6/">
+    <input type="radio" name="avatar" value="https://lorempixel.com/200/200/people/2/"><img src="https://lorempixel.com/200/200/people/2/">
+    <input type="radio" name="avatar" value="https://lorempixel.com/200/200/people/8/"><img src="https://lorempixel.com/200/200/people/8/">
+  </div>
+  </div>
+
   <div id="ui">
   <div id="playerInfo">
     <img id="playerAvatar" src="images/question.png">
