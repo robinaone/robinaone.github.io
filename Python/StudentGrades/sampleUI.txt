@@ -1,0 +1,35 @@
+Please enter the student's name: Bill Neely
+
+Please enter a grade category (DONE): Daily Grades
+Please enter a grade category (DONE): Quizzes
+Please enter a grade category (DONE): Tests
+Please enter a grade category (DONE): DONE
+
+Please enter the % weight for 'Daily Grades': 10
+Please enter the % weight for 'Quizzes':      30
+Please enter the % weight for 'Tests':        40
+
+The weights must add up to 100% - Please reenter.
+Please enter the % weight for 'Daily Grades': 20
+Please enter the % weight for 'Quizzes':      30
+Please enter the % weight for 'Tests':        40
+
+R. See the Report Card
+Q. Quit
+1. Enter: Daily Grades
+2. Enter: Quizzes
+3. Enter: Tests
+Choose an Option: 1
+Please enter assignment name: Week 1 Homework
+Enter what grade was earned: 90
+
+*****
+
+Choose an Option: R
+  <prints report card>
+
+*****
+
+Choose an Option: Q
+  <print report card>
+  <ends program>
