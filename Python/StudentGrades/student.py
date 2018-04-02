@@ -13,5 +13,11 @@ class Student:
     def categoriesAreValid(self):
         total = 0
         for category in self.categories:
-            total += int(category.weight)
+            total += category.weight
         return total == 100
+
+    def finalAverage(self):
+        final = 0
+        for category in self.categories:
+            final += category.categoryAverage()
+        return final
