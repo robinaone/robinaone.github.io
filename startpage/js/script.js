@@ -13,7 +13,7 @@ var settings = {
 	},
 
 	"clock": {
-		"showClock": true
+		"showClock": false
 	},
 
 	"animation": {
