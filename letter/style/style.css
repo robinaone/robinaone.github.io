@@ -1,0 +1,6 @@
+body {
+	background: #151515;										/* Page background */
+	color: #999;														/* Font color */
+	font-family: "Museo", "Helvetica Neue", sans-serif;	/* Font */
+	text-shadow: rgba(0,0,0,0.6) 1px 1px 0; /* Text Shadow */
+}
