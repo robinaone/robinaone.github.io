@@ -1,3 +1,3 @@
-# Caleb Hargraves GitHutb Pages
+# Caleb Hargraves GitHut.io Pages
 
-ITSE1311 - Spring 2018 CTTC
+* Originally built during ITSE1311 - Spring 2018 CTTC
